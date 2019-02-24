@@ -10,20 +10,17 @@ import Foundation
 public struct UnitDTO {
     public let id: Int
     public let name: String
-    public let cost: Int
     public let isUnique: Bool
     public let minQuantity: Int
     public let maxQuantity: Int
 
     public init(id: Int,
                 name: String,
-                cost: Int,
                 isUnique: Bool,
                 minQuantity: Int,
                 maxQuantity: Int) {
         self.id = id
         self.name = name
-        self.cost = cost
         self.isUnique = isUnique
         self.minQuantity = minQuantity
         self.maxQuantity = maxQuantity

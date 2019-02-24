@@ -26,7 +26,7 @@ public struct RoasterResponse: Codable {
     public let detachments: [DetachmentResponse]
     public let rules: [RuleResponse]
 
-    init(roaster: RoasterDTO, detachments: [DetachmentResponse], rules: [RuleResponse]) {
+    public init(roaster: RoasterDTO, detachments: [DetachmentResponse], rules: [RuleResponse]) {
         self.id = roaster.id
         self.name = roaster.name
         self.version = roaster.version
