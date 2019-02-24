@@ -20,17 +20,17 @@ public struct CharacteristicsDTO: Codable {
     public let save: String
     public let modelId: Int
 
-    init(id: Int,
-         movement: String,
-         weaponSkill: String,
-         balisticSkill: String,
-         strength: String,
-         toughness: String,
-         wounds: String,
-         attacks: String,
-         leadership: String,
-         save: String,
-         modelId: Int) {
+    public init(id: Int,
+                movement: String,
+                weaponSkill: String,
+                balisticSkill: String,
+                strength: String,
+                toughness: String,
+                wounds: String,
+                attacks: String,
+                leadership: String,
+                save: String,
+                modelId: Int) {
         self.id = id
         self.movement = movement
         self.weaponSkill = weaponSkill
