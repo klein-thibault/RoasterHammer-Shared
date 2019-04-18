@@ -76,11 +76,11 @@ public struct ModelResponse: Codable {
     public let maxQuantity: Int
     public let weaponQuantity: Int
     public let characteristics: CharacteristicsDTO
-    public let weapons: [WeaponResponse]
+    public let weaponBuckets: [WeaponBucketResponse]
 
     public init(model: ModelDTO,
                 characteristics: CharacteristicsDTO,
-                weapons: [WeaponResponse]) {
+                weaponBuckets: [WeaponBucketResponse]) {
         self.id = model.id
         self.name = model.name
         self.cost = model.cost
@@ -88,6 +88,6 @@ public struct ModelResponse: Codable {
         self.maxQuantity = model.maxQuantity
         self.weaponQuantity = model.weaponQuantity
         self.characteristics = characteristics
-        self.weapons = weapons
+        self.weaponBuckets = weaponBuckets
     }
 }
