@@ -49,10 +49,8 @@ public struct WeaponResponse: Codable {
     public let damage: String
     public let cost: Int
     public let ability: String
-    public let minQuantity: Int
-    public let maxQuantity: Int
 
-    public init(weapon: WeaponDTO, minQuantity: Int, maxQuantity: Int) {
+    public init(weapon: WeaponDTO) {
         self.id = weapon.id
         self.name = weapon.name
         self.range = weapon.range
@@ -62,7 +60,5 @@ public struct WeaponResponse: Codable {
         self.damage = weapon.damage
         self.cost = weapon.cost
         self.ability = weapon.ability
-        self.minQuantity = minQuantity
-        self.maxQuantity = maxQuantity
     }
 }
