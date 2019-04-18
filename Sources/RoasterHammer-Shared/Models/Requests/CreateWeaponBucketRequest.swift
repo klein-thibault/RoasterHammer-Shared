@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CreateWeaponBucketRequest: Content {
+public struct CreateWeaponBucketRequest: Codable {
     public let name: String
 
     public init(name: String) {
