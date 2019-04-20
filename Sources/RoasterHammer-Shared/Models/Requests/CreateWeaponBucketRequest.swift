@@ -9,8 +9,12 @@ import Foundation
 
 public struct CreateWeaponBucketRequest: Codable {
     public let name: String
+    public let minWeaponQuantity: Int
+    public let maxWeaponQuantity: Int
 
-    public init(name: String) {
+    public init(name: String, minWeaponQuantity: Int, maxWeaponQuantity: Int) {
         self.name = name
+        self.minWeaponQuantity = minWeaponQuantity
+        self.maxWeaponQuantity = maxWeaponQuantity
     }
 }
