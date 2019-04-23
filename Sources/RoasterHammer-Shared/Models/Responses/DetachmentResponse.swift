@@ -23,6 +23,7 @@ public struct DetachmentResponse: Codable {
     public let id: Int
     public let name: String
     public let commandPoints: Int
+    public let totalCost: Int
     public let selectedFaction: FactionResponse?
     public let roles: [RoleResponse]
     public let army: ArmyResponse
@@ -34,6 +35,7 @@ public struct DetachmentResponse: Codable {
         self.id = detachment.id
         self.name = detachment.name
         self.commandPoints = detachment.commandPoints
+        self.totalCost = roles.reduce(0) { $0 + $1.totalCost }
         self.selectedFaction = selectedFaction
         self.roles = roles
         self.army = army

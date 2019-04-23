@@ -20,11 +20,13 @@ public struct RoleDTO {
 public struct RoleResponse: Codable {
     public let id: Int
     public let name: String
+    public let totalCost: Int
     public let units: [SelectedUnitResponse]
 
     public init(role: RoleDTO, units: [SelectedUnitResponse]) {
         self.id = role.id
         self.name = role.name
+        self.totalCost = units.reduce(0) { $0 + $1.cost }
         self.units = units
     }
 }
