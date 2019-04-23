@@ -11,11 +11,13 @@ public struct RoasterDTO {
     public let id: Int
     public let name: String
     public let version: Int
+    public let totalPoints: Int
 
-    public init(id: Int, name: String, version: Int) {
+    public init(id: Int, name: String, version: Int, totalPoints: Int) {
         self.id = id
         self.name = name
         self.version = version
+        self.totalPoints = totalPoints
     }
 }
 
@@ -23,6 +25,7 @@ public struct RoasterResponse: Codable {
     public let id: Int
     public let name: String
     public let version: Int
+    public let totalPoints: Int
     public let detachments: [DetachmentResponse]
     public let rules: [RuleResponse]
 
@@ -30,6 +33,7 @@ public struct RoasterResponse: Codable {
         self.id = roaster.id
         self.name = roaster.name
         self.version = roaster.version
+        self.totalPoints = roaster.totalPoints
         self.detachments = detachments
         self.rules = rules
     }
