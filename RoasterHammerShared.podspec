@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RoasterHammerShared"
-  s.version          = "0.0.19"
+  s.version          = "0.0.20"
   s.summary          = "Shared library for the RoasterHammer application"
 
   s.homepage         = "https://github.com/klein-thibault/RoasterHammer-Shared"

@@ -23,7 +23,7 @@ public struct RoasterResponse: Codable {
     public let id: Int
     public let name: String
     public let version: Int
-    public let totalPoints: Int
+    public let totalCost: Int
     public let detachments: [DetachmentResponse]
     public let rules: [RuleResponse]
 
@@ -31,7 +31,7 @@ public struct RoasterResponse: Codable {
         self.id = roaster.id
         self.name = roaster.name
         self.version = roaster.version
-        self.totalPoints = detachments.reduce(0) { $0 + $1.totalCost }
+        self.totalCost = detachments.reduce(0) { $0 + $1.totalCost }
         self.detachments = detachments
         self.rules = rules
     }
