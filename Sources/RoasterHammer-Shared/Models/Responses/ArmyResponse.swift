@@ -22,13 +22,16 @@ public struct ArmyResponse: Codable {
     public let name: String
     public let factions: [FactionResponse]
     public let rules: [RuleResponse]
+    public let relics: [RelicResponse]
 
     public init(army: ArmyDTO,
                 factions: [FactionResponse],
-                rules: [RuleResponse]) {
+                rules: [RuleResponse],
+                relics: [RelicResponse]) {
         self.id = army.id
         self.name = army.name
         self.factions = factions
         self.rules = rules
+        self.relics = relics
     }
 }
