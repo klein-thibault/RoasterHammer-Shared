@@ -23,15 +23,18 @@ public struct ArmyResponse: Codable {
     public let factions: [FactionResponse]
     public let rules: [RuleResponse]
     public let relics: [RelicResponse]
+    public let warlordTraits: [WarlordTraitResponse]
 
     public init(army: ArmyDTO,
                 factions: [FactionResponse],
                 rules: [RuleResponse],
-                relics: [RelicResponse]) {
+                relics: [RelicResponse],
+                warlordTraits: [WarlordTraitResponse]) {
         self.id = army.id
         self.name = army.name
         self.factions = factions
         self.rules = rules
         self.relics = relics
+        self.warlordTraits = warlordTraits
     }
 }
