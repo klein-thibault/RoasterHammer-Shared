@@ -39,13 +39,15 @@ public struct UnitResponse: Codable {
     public let models: [ModelResponse]
     public let keywords: [String]
     public let rules: [RuleResponse]
+    public let availableWarlordTraits: [WarlordTraitResponse]
 
     public init(unit: UnitDTO,
                 unitType: String,
                 army: ArmyResponse,
                 models: [ModelResponse],
                 keywords: [String],
-                rules: [RuleResponse]) {
+                rules: [RuleResponse],
+                availableWarlordTraits: [WarlordTraitResponse]) {
         self.id = unit.id
         self.name = unit.name
         self.cost = models.reduce(0) { $0 + $1.cost }
@@ -57,5 +59,6 @@ public struct UnitResponse: Codable {
         self.models = models
         self.keywords = keywords
         self.rules = rules
+        self.availableWarlordTraits = availableWarlordTraits
     }
 }
