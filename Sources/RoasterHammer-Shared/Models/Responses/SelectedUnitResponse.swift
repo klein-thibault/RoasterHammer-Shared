@@ -23,14 +23,20 @@ public struct SelectedUnitResponse: Codable {
     public let isWarlord: Bool
     public let unit: UnitResponse
     public let models: [SelectedModelResponse]
+    public let warlordTrait: WarlordTraitResponse?
+    public let relic: RelicResponse?
 
     public init(selectedUnit: SelectedUnitDTO,
          unit: UnitResponse,
-         models: [SelectedModelResponse]) {
+         models: [SelectedModelResponse],
+         warlordTrait: WarlordTraitResponse?,
+         relic: RelicResponse?) {
         self.id = selectedUnit.id
         self.cost = models.reduce(0) { $0 + $1.cost }
         self.isWarlord = selectedUnit.isWarlord
         self.unit = unit
         self.models = models
+        self.warlordTrait = warlordTrait
+        self.relic = relic
     }
 }
