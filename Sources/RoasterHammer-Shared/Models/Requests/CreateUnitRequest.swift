@@ -9,25 +9,31 @@ public struct CreateUnitRequest: Codable {
     public let maxQuantity: Int
     public let unitTypeId: Int
     public let armyId: Int
+    public let minPsychicPowerQuantity: Int
+    public let maxPsychicPowerQuantity: Int
     public let models: [CreateModelRequest]
     public let keywords: [KeywordName]
     public let rules: [AddRuleRequest]
 
     public init(name: String,
-         isUnique: Bool,
-         minQuantity: Int,
-         maxQuantity: Int,
-         unitTypeId: Int,
-         armyId: Int,
-         models: [CreateModelRequest],
-         keywords: [KeywordName],
-         rules: [AddRuleRequest]) {
+                isUnique: Bool,
+                minQuantity: Int,
+                maxQuantity: Int,
+                unitTypeId: Int,
+                armyId: Int,
+                minPsychicPowerQuantity: Int,
+                maxPsychicPowerQuantity: Int,
+                models: [CreateModelRequest],
+                keywords: [KeywordName],
+                rules: [AddRuleRequest]) {
         self.name = name
         self.isUnique = isUnique
         self.minQuantity = minQuantity
         self.maxQuantity = maxQuantity
         self.unitTypeId = unitTypeId
         self.armyId = armyId
+        self.minPsychicPowerQuantity = minPsychicPowerQuantity
+        self.maxPsychicPowerQuantity = maxPsychicPowerQuantity
         self.models = models
         self.keywords = keywords
         self.rules = rules

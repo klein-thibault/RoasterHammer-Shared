@@ -25,12 +25,14 @@ public struct SelectedUnitResponse: Codable {
     public let models: [SelectedModelResponse]
     public let warlordTrait: WarlordTraitResponse?
     public let relic: RelicResponse?
+    public let psychicPowers: [PsychicPowerResponse]
 
     public init(selectedUnit: SelectedUnitDTO,
-         unit: UnitResponse,
-         models: [SelectedModelResponse],
-         warlordTrait: WarlordTraitResponse?,
-         relic: RelicResponse?) {
+                unit: UnitResponse,
+                models: [SelectedModelResponse],
+                warlordTrait: WarlordTraitResponse?,
+                relic: RelicResponse?,
+                psychicPowers: [PsychicPowerResponse]) {
         self.id = selectedUnit.id
         self.cost = models.reduce(0) { $0 + $1.cost }
         self.isWarlord = selectedUnit.isWarlord
@@ -38,5 +40,6 @@ public struct SelectedUnitResponse: Codable {
         self.models = models
         self.warlordTrait = warlordTrait
         self.relic = relic
+        self.psychicPowers = psychicPowers
     }
 }
